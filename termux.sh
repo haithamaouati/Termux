@@ -10,6 +10,14 @@ if [ "$EUID" -eq 0 ]; then
   exit 1
 fi
 
+# Check if script is running on Termux
+if [ -n "$TERMUX" ]; then
+  termux-setup-storage
+  main_menu()
+else
+  exit
+fi
+
 main_menu() {
   while true; do
     echo "Main menu:"
