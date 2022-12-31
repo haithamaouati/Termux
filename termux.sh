@@ -13,7 +13,7 @@ fi
 # Check if script is running on Termux
 if [ -n "$TERMUX" ]; then
   termux-setup-storage
-  main_menu()
+  main_menu
 else
   exit
 fi
