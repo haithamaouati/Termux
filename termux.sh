@@ -33,15 +33,15 @@ main_menu() {
 }
 
 update_packages() {
-  pkg update
+  pkg update -y
 }
 
 upgrade_packages() {
-  pkg upgrade
+  pkg upgrade -y
 }
 
 install_packages() {
-  pkg install -y git wget curl nano htop python python2 python3
+  pkg install -y termux-tools ncurses-utils proot tsu git wget curl nano htop python python2 python3 openssh neofetch screenfetch cpufetch zip unzip unrar figlet cowsay
 }
 
 exit_script() {
