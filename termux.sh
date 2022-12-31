@@ -18,6 +18,15 @@ else
   exit
 fi
 
+# Check if figlet package is installed
+if ! command -v figlet > /dev/null; then
+  pkg install -y figlet
+fi
+
+# Print "Termux" using figlet and the standard font
+figlet -f standard "Termux"
+
+
 main_menu() {
   while true; do
     echo "Main menu:"
