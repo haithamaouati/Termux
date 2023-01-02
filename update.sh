@@ -1,7 +1,3 @@
-#!/bin/bash
-
-# GitHub repo: https://github.com/haithamaouati/Termux.git
-
 update_repo() {
   # Check if a repository URL was provided
   if [ -z "$1" ]; then
