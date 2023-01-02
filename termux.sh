@@ -10,13 +10,6 @@ if [ "$EUID" -eq 0 ]; then
   exit 1
 fi
 
-# Check if script is running on Termux
-if [ -n "$TERMUX" ]; then
-  termux-setup-storage
-else
-  exit
-fi
-
 # Check if figlet package is installed
 if ! command -v figlet > /dev/null; then
   pkg install -y figlet
@@ -33,6 +26,7 @@ main_menu() {
     echo "3. Install packages"
     echo "4. Update repo"
     echo "5. Exit"
+    echo.
     read -p "Enter your choice: " choice
 
     case $choice in
