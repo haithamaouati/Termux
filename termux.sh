@@ -26,17 +26,6 @@ fi
 # Print "Termux" using figlet and the standard font
 figlet -f standard "Termux"
 
-# Check if the --version flag was passed
-if [[ $1 == "--version" ]]; then
-  # Read the version from the VERSION file
-  version=$(cat VERSION)
-
-  # Print the version of the script
-  $0
-  echo "Version $version"
-  exit 0
-fi
-
 main_menu() {
   while true; do
     echo "Main menu:"
