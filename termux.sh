@@ -26,8 +26,6 @@ fi
 # Print "Termux" using figlet and the standard font
 figlet -f standard "Termux"
 
-#!/bin/bash
-
 # Check if the --version flag was passed
 if [[ $1 == "--version" ]]; then
   # Read the version from the VERSION file
