@@ -32,7 +32,7 @@ main_menu() {
     echo "Main menu:"
     echo "1. Update packages"
     echo "2. Upgrade packages"
-    echo "3. Install needed packages"
+    echo "3. Install packages"
     echo "4. Exit"
     read -p "Enter your choice: " choice
 
