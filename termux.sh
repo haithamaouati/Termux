@@ -59,7 +59,7 @@ upgrade_packages() {
 }
 
 install_packages() {
-  pkg install -y termux-tools android-tools ncurses-utils proot tsu git wget curl nano htop python python2 python3 openssh neofetch screenfetch cpufetch zip unzip unrar figlet cowsay
+  pkg install -y termux-tools android-tools ncursed-utils proot tsu git wget curl nano htop python python2 python3 openssh neofetch screenfetch cpufetch zip unzip unrar figlet cowsay
   pkg update -y
   pkg upgrade -y
 }
