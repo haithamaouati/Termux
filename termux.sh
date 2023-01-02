@@ -26,6 +26,18 @@ fi
 # Print "Termux" using figlet and the standard font
 figlet -f standard "Termux"
 
+#!/bin/bash
+
+# Check if the --version flag was passed
+if [[ $1 == "--version" ]]; then
+  # Read the version from the VERSION file
+  version=$(cat VERSION)
+
+  # Print the version of the script
+  $0
+  echo "Version $version"
+  exit 0
+fi
 
 main_menu() {
   while true; do
@@ -33,14 +45,16 @@ main_menu() {
     echo "1. Update packages"
     echo "2. Upgrade packages"
     echo "3. Install packages"
-    echo "4. Exit"
+    echo "4. Update repo
+    echo "5. Exit"
     read -p "Enter your choice: " choice
 
     case $choice in
       1) update_packages;;
       2) upgrade_packages;;
       3) install_packages;;
-      4) exit_script;;
+      4) update_repo;;
+      5) exit_script;;
       *)
         # Invalid input
         echo "Invalid choice. Please try again."
@@ -61,6 +75,10 @@ install_packages() {
   pkg install -y termux-tools android-tools ncurses-utils proot tsu git wget curl nano htop python python2 python3 openssh neofetch screenfetch cpufetch zip unzip unrar figlet cowsay
   pkg update -y
   pkg upgrade -y
+}
+
+update_repo() {
+
 }
 
 exit_script() {
